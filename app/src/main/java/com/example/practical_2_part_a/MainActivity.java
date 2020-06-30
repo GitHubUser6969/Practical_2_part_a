@@ -8,8 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private int mCount=0;
+
+    private int mCount = 0;
     private TextView mShowCount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showToast(View view){
-         Toast toast= Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this,R.string.toast_message,Toast.LENGTH_SHORT);
 
-         toast.show();
+        toast.show();
     }
 
     public void countUp(View view){
         ++mCount;
-         if(mShowCount!=null){
-             mShowCount.setText(Integer.toString(mCount));
-         }
+        if(mShowCount !=null)
+            mShowCount.setText(Integer.toString(mCount));
     }
+
 }
